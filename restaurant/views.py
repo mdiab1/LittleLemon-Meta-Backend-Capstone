@@ -16,7 +16,7 @@ def index(request):
 class BookingView(generics.ListCreateAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
-    #permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
 class MenuItemView(generics.ListCreateAPIView):
     queryset = MenuItem.objects.all()
